@@ -14,6 +14,12 @@ class ProductProperties {                                       //Seting up Prod
     return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}`;
   }
 
+    static applyDiscount(products, discount) {
+    products.forEach(product => {
+      product.unitPrice = product.unitPrice - (product.unitPrice * discount);
+    });
+  }
+
 }
 
 class PerishableProductProperties extends ProductProperties {   //Setting up PerishableProductProperties to call superclass constructor to add expiry date 
