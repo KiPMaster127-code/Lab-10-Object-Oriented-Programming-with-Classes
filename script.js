@@ -37,4 +37,8 @@ class Store {
     this.products.push(product);
   }
 
+  getInventoryValue() {
+    return this.products.reduce((total, product) => total + product.getTotalValue(), 0);
+  }
+
 }
