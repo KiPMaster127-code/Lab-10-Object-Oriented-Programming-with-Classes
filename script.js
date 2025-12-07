@@ -14,7 +14,7 @@ class ProductProperties {                                       //Seting up Prod
     return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}`;
   }
 
-    static applyDiscount(products, discount) {
+    static applyDiscount(products, discount) {              //Static Method for applying discount
     products.forEach(product => {
       product.unitPrice = product.unitPrice - (product.unitPrice * discount);
     });
@@ -53,13 +53,13 @@ class Store {                                                   //Store class to
 
 }
 
-const apple = new ProductProperties("Apple", 2.50, 50);
+const apple = new ProductProperties("Apple", 2.50, 50);         //Sample products
 const orange = new ProductProperties("Orange", 3.00, 30);
 const rice = new ProductProperties("Rice", 10.00, 5);
 const milk = new PerishableProductProperties("Milk", 1.50, 10, "2026-12-31");
 const bread = new PerishableProductProperties("Bread", 2.00, 20, "2026-11-15");
 
-const myStore = new Store();
+const myStore = new Store();                                    //The store and it's products 
 
 myStore.addProduct(apple);
 myStore.addProduct(orange);
@@ -67,15 +67,15 @@ myStore.addProduct(rice);
 myStore.addProduct(milk);
 myStore.addProduct(bread);
 
-console.log("Total cost Before Discount is $" + myStore.getInventoryValue().toFixed(2));
+console.log("Total cost Before Discount is $" + myStore.getInventoryValue().toFixed(2)); //Output before discount 
 
 ProductProperties.applyDiscount(myStore.products, 0.15);
 
-console.log("Total cost after discount is $" + myStore.getInventoryValue().toFixed(2));
+console.log("Total cost after discount is $" + myStore.getInventoryValue().toFixed(2)); //Output after discount
 
 const foundProduct = myStore.findProductByName("Rice");
 
-console.log("Found Product", foundProduct ? foundProduct.toString() : "The product is not Found");
+console.log("Found Product", foundProduct ? foundProduct.toString() : "The product is not Found"); //Output for the search of Rice product
 
 
 
