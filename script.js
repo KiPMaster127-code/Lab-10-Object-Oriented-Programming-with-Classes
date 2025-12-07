@@ -22,4 +22,8 @@ class PerishableProductProperties extends ProductProperties {
     this.expiryDate = expiryDate;
   }
 
+  toString() {
+    return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}, Expiry Date: ${this.expiryDate}`;
+  }
+
 }
