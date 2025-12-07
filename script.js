@@ -27,3 +27,11 @@ class PerishableProductProperties extends ProductProperties {   //Setting up Per
   }
 
 }
+
+class Store {
+  constructor() {
+    this.products = [];
+ }
+
+ 
+}
