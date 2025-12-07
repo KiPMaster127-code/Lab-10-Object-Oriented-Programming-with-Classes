@@ -33,5 +33,8 @@ class Store {
     this.products = [];
  }
 
- 
+ addProduct(product) {
+    this.products.push(product);
+  }
+
 }
