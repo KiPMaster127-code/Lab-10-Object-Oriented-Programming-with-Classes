@@ -61,3 +61,6 @@ myStore.addProduct(rice);
 myStore.addProduct(milk);
 myStore.addProduct(bread);
 
+console.log("Total cost Before Discount is $" + myStore.getInventoryValue().toFixed(2));
+
+
