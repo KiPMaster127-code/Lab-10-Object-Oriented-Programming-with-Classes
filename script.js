@@ -73,4 +73,10 @@ ProductProperties.applyDiscount(myStore.products, 0.15);
 
 console.log("Total cost after discount is $" + myStore.getInventoryValue().toFixed(2));
 
+const foundProduct = myStore.findProductByName("Rice");
+
+console.log("Found Product", foundProduct ? foundProduct.toString() : "The product is not Found");
+
+
+
 
