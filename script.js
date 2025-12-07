@@ -1,15 +1,16 @@
-class ProductProperties {
-  constructor(productName, unitPrice, stockQuantity) {
+class ProductProperties {                                       //Seting up ProductProperties class
+
+  constructor(productName, unitPrice, stockQuantity) {         //Creating function that would set products name, price and it's quantity
     this.productName = productName;
     this.unitPrice = unitPrice;
     this.stockQuantity = stockQuantity;
   }
 
-  getTotalValue() {
+  getTotalValue() {                                            //Prints TotalValue of the product
     return this.unitPrice * this.stockQuantity;
   }
 
-  toString() {
+  toString() {                                                //Prints out custom string to represent the product with descriptions
     return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}`;
   }
 
