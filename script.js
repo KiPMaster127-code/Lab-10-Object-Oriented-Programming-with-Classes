@@ -41,4 +41,8 @@ class Store {
     return this.products.reduce((total, product) => total + product.getTotalValue(), 0);
   }
 
+  findProductByName(productName) {
+    return this.products.find(product => product.productName.toLowerCase() === productName.toLowerCase()) || null;
+  }
+
 }
