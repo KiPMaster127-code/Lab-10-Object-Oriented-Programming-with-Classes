@@ -16,13 +16,13 @@ class ProductProperties {                                       //Seting up Prod
 
 }
 
-class PerishableProductProperties extends ProductProperties {
+class PerishableProductProperties extends ProductProperties {   //Setting up PerishableProductProperties to call superclass constructor to add expiry date 
   constructor(productName, unitPrice, stockQuantity, expiryDate) {
     super(productName, unitPrice, stockQuantity);
     this.expiryDate = expiryDate;
   }
 
-  toString() {
+  toString() {                                                  //Overrides original script to include expiration date
     return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}, Expiry Date: ${this.expiryDate}`;
   }
 
