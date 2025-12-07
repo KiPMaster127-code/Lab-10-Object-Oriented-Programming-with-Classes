@@ -9,4 +9,8 @@ class ProductProperties {
     return this.unitPrice * this.stockQuantity;
   }
 
+  toString() {
+    return `Product: ${this.productName}, Price: $${this.unitPrice.toFixed(2)}, Quantity: ${this.stockQuantity}`;
+  }
+
 }
