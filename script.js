@@ -69,4 +69,8 @@ myStore.addProduct(bread);
 
 console.log("Total cost Before Discount is $" + myStore.getInventoryValue().toFixed(2));
 
+ProductProperties.applyDiscount(myStore.products, 0.15);
+
+console.log("Total cost after discount is $" + myStore.getInventoryValue().toFixed(2));
+
 
