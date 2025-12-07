@@ -46,3 +46,18 @@ class Store {                                                   //Store class to
   }
 
 }
+
+const apple = new ProductProperties("Apple", 2.50, 50);
+const orange = new ProductProperties("Orange", 3.00, 30);
+const rice = new ProductProperties("Rice", 10.00, 5);
+const milk = new PerishableProductProperties("Milk", 1.50, 10, "2026-12-31");
+const bread = new PerishableProductProperties("Bread", 2.00, 20, "2026-11-15");
+
+const myStore = new Store();
+
+myStore.addProduct(apple);
+myStore.addProduct(orange);
+myStore.addProduct(rice);
+myStore.addProduct(milk);
+myStore.addProduct(bread);
+
