@@ -28,20 +28,20 @@ class PerishableProductProperties extends ProductProperties {   //Setting up Per
 
 }
 
-class Store {
+class Store {                                                   //Store class to manage store items 
   constructor() {
     this.products = [];
  }
 
- addProduct(product) {
+ addProduct(product) {                                          //Adds products to the store
     this.products.push(product);
   }
 
-  getInventoryValue() {
+  getInventoryValue() {                                         //Calculates the total of all products in the store
     return this.products.reduce((total, product) => total + product.getTotalValue(), 0);
   }
 
-  findProductByName(productName) {
+  findProductByName(productName) {                              //Finding specific products by name
     return this.products.find(product => product.productName.toLowerCase() === productName.toLowerCase()) || null;
   }
 
